@@ -10,4 +10,6 @@ public class CitaDTO {
     private String statusCita;
     private Long pacienteId;
     private Long medicoId;
+
+    private boolean cancelado;
 }
