@@ -4,6 +4,7 @@ import com.springboot.hospital.dto.CitaDTO;
 import com.springboot.hospital.model.Cita;
 import com.springboot.hospital.model.StatusCita;
 
+import java.text.ParseException;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,9 +14,9 @@ public interface CitaService {
 
     Optional<CitaDTO> getCitaById(Long id);
 
-    CitaDTO createCita(CitaDTO citaDTO, Long pacienteId, Long medicoId);
+    Cita createCita(CitaDTO citaDTO, Long pacienteId, Long medicoId) throws ParseException;
 
-    CitaDTO updateCita(Long id, CitaDTO citaDTO);
+    CitaDTO updateCita(Long id, CitaDTO citaDTO) throws ParseException;
 
     void deleteCita(Long id);
 

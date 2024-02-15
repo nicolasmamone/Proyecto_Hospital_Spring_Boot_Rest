@@ -17,7 +17,7 @@ public class PacienteServiceImpl implements PacienteService {
     }
 
     @Override
-    public Optional<PacienteDTO> getPAcienteById(Long pacienteId) {
+    public Optional<PacienteDTO> getPacienteById(Long pacienteId) {
         return Optional.empty();
     }
 
