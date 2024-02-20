@@ -17,7 +17,9 @@ public interface MedicoService {
 
     MedicoDTO updateMedico(Long id, MedicoDTO medicoDTO);
 
+    void deleteMedico(Long id);
+
     Collection<CitaDTO> getCitasByMedicoId(Long medicoId);
 
-    List<MedicoDTO> getMedicosByEspecialidad();
+    List<MedicoDTO> getMedicosByEspecialidad(String especialidad);
 }
