@@ -13,9 +13,9 @@ public interface ConsultaService {
 
     Optional<ConsultaDTO> getConsultaById(Long consultaId);
 
-    ConsultaDTO createConsulta(ConsultaDTO consultaDTO) throws ParseException; // por la fecha que necesita parsearce
+    ConsultaDTO createConsulta(Long citaId, ConsultaDTO consultaDTO) throws ParseException; // por la fecha que necesita parsearce
 
-    ConsultaDTO updateConsulta(Long consultaId, ConsultaDTO consultaDTO);
+    ConsultaDTO updateConsulta(Long consultaId, ConsultaDTO consultaDTO) throws ParseException;
 
     void deleteConsulta(Long consultaId);
 
