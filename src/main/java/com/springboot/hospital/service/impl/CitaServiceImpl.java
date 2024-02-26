@@ -92,8 +92,10 @@ public class CitaServiceImpl implements CitaService {
         Optional<Cita> citaOptional = citaRepository.findById(id);
         if (citaOptional.isPresent()){
             Cita cita = citaOptional.get();
+            //cita.setId(citaDTO.getId());
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             Date fecha = dateFormat.parse(citaDTO.getFecha()); // transformando el string de citaDTO.getFecha a Date fecha
+            //cita.setFecha(fecha);
             cita.setCancelado(citaDTO.isCancelado());
             cita.setStatusCita(StatusCita.valueOf(citaDTO.getStatusCita()));
 
